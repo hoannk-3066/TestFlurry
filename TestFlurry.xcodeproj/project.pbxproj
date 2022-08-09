@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		506662DC7065FF9193287347 /* Pods_TestFlurry.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAA0F058AFBF711AD6B97FAA /* Pods_TestFlurry.framework */; };
 		F052BA21289CD3020074CEC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F052BA20289CD3020074CEC9 /* AppDelegate.swift */; };
 		F052BA23289CD3020074CEC9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F052BA22289CD3020074CEC9 /* SceneDelegate.swift */; };
 		F052BA25289CD3020074CEC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F052BA24289CD3020074CEC9 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66BD2FB2DEA57DC8C6F30A49 /* Pods-TestFlurry.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFlurry.debug.xcconfig"; path = "Target Support Files/Pods-TestFlurry/Pods-TestFlurry.debug.xcconfig"; sourceTree = "<group>"; };
+		93A43918D08801B8CCD3F4D8 /* Pods-TestFlurry.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestFlurry.release.xcconfig"; path = "Target Support Files/Pods-TestFlurry/Pods-TestFlurry.release.xcconfig"; sourceTree = "<group>"; };
+		AAA0F058AFBF711AD6B97FAA /* Pods_TestFlurry.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestFlurry.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F052BA1D289CD3020074CEC9 /* TestFlurry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestFlurry.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F052BA20289CD3020074CEC9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F052BA22289CD3020074CEC9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				506662DC7065FF9193287347 /* Pods_TestFlurry.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		182527881243436D42D0A268 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAA0F058AFBF711AD6B97FAA /* Pods_TestFlurry.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		51798696DB2F4DC50FDA1D73 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66BD2FB2DEA57DC8C6F30A49 /* Pods-TestFlurry.debug.xcconfig */,
+				93A43918D08801B8CCD3F4D8 /* Pods-TestFlurry.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F052BA14289CD3020074CEC9 = {
 			isa = PBXGroup;
 			children = (
 				F052BA1F289CD3020074CEC9 /* TestFlurry */,
 				F052BA1E289CD3020074CEC9 /* Products */,
+				51798696DB2F4DC50FDA1D73 /* Pods */,
+				182527881243436D42D0A268 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +98,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F052BA31289CD3040074CEC9 /* Build configuration list for PBXNativeTarget "TestFlurry" */;
 			buildPhases = (
+				041A3BD7CD5930F936BF5CF6 /* [CP] Check Pods Manifest.lock */,
 				F052BA19289CD3020074CEC9 /* Sources */,
 				F052BA1A289CD3020074CEC9 /* Frameworks */,
 				F052BA1B289CD3020074CEC9 /* Resources */,
@@ -132,6 +157,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		041A3BD7CD5930F936BF5CF6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TestFlurry-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F052BA19289CD3020074CEC9 /* Sources */ = {
@@ -284,11 +334,13 @@
 		};
 		F052BA32289CD3040074CEC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66BD2FB2DEA57DC8C6F30A49 /* Pods-TestFlurry.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66JWGT9VWJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestFlurry/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -296,6 +348,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,11 +364,13 @@
 		};
 		F052BA33289CD3040074CEC9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 93A43918D08801B8CCD3F4D8 /* Pods-TestFlurry.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66JWGT9VWJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestFlurry/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -323,6 +378,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
